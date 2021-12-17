@@ -2,10 +2,12 @@
 let weather1 = {
   apiKey: "9b9bea2d75a107e39817969422f605db",
 // created the fetch weather function to fetch the weather for Montreal
-  fetchWeather: function () {
+  fetchWeather: function (montreal) {
     fetch(
-      `https://api.openweathermap.org/data/2.5/weather?q=${Montreal}
-       &units=metric&appid=${apiKey}`
+      "https://api.openweathermap.org/data/2.5/weather?q=" +
+       montreal +
+       "&units=metric&appid=" +
+       this.apiKey
     )
     .then((response) => response.json())
     .then((data) => this.displayWeather(data));
@@ -24,21 +26,23 @@ document.querySelector(".humidity1").innerText = "Humidity: " + humidity + "%";
   },
   // created a search function to find montreal
   search: function () {
-    this.fetchWeather(document.getElementById("montreal"));
+    this.fetchWeather(document.getElementById("montreal").value);
   },
 };
 // created an event listener to capture the information and display it on browser load
-document.getElementById("montreal").addEventListener("load", function () {
+document.getElementById("montreal").addEventListener("click", function () {
   weather1.search();
   });
 
   let weather2 = {
     apiKey: "9b9bea2d75a107e39817969422f605db",
   // created the fetch weather function to fetch the weather for Montreal
-    fetchWeather: function () {
+    fetchWeather: function (toronto) {
       fetch(
-        `https://api.openweathermap.org/data/2.5/weather?q=${Toronto}
-         &units=metric&appid=${apiKey}`
+        "https://api.openweathermap.org/data/2.5/weather?q=" +
+        toronto +
+        "&units=metric&appid=" +
+        this.apiKey
       )
       .then((response) => response.json())
       .then((data) => this.displayWeather(data));
@@ -55,13 +59,13 @@ document.getElementById("montreal").addEventListener("load", function () {
   document.querySelector(".pressure2").innerText = "Pressure: " + pressure + "hpa";
   document.querySelector(".humidity2").innerText = "Humidity: " + humidity + "%";
     },
-    // created a search function to find montreal
+    // created a search function to find totonto
     search: function () {
-      this.fetchWeather(document.getElementById("montreal"));
+      this.fetchWeather(document.getElementById("toronto"));
     },
   };
   // created an event listener to capture the information and display it on browser load
-  document.getElementById("montreal").addEventListener("load", function () {
+  document.getElementById("montreal").addEventListener("click", function () {
     weather2.search();
     });
 
