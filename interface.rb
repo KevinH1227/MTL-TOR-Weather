@@ -1,0 +1,13 @@
+puts "Open Weather Client"
+puts "city: Montreal"
+puts "Temp:"
+puts "Feels like:"
+puts "Pressure:"
+puts "Humidity:"
+
+puts "city: Toronto"
+puts "Temp: "
+puts "Feels like:"
+puts "Pressure:"
+puts "Humidity:"
+puts "Press any key to exit..."
