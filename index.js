@@ -36,7 +36,7 @@ document.getElementById("montreal").addEventListener("click", function () {
 
   let weather2 = {
     apiKey: "9b9bea2d75a107e39817969422f605db",
-  // created the fetch weather function to fetch the weather for Montreal
+  // created the fetch weather function to fetch the weather for Toronto
     fetchWeather: function (toronto) {
       fetch(
         "https://api.openweathermap.org/data/2.5/weather?q=" +
@@ -59,7 +59,7 @@ document.getElementById("montreal").addEventListener("click", function () {
   document.querySelector(".pressure2").innerText = "Pressure: " + pressure + "hpa";
   document.querySelector(".humidity2").innerText = "Humidity: " + humidity + "%";
     },
-    // created a search function to find totonto
+    // created a search function to find toronto
     search: function () {
       this.fetchWeather(document.getElementById("toronto"));
     },
@@ -68,4 +68,3 @@ document.getElementById("montreal").addEventListener("click", function () {
   document.getElementById("montreal").addEventListener("click", function () {
     weather2.search();
     });
-
