@@ -1,2 +1,2 @@
 # MTL-TOR-Weather
-Weather in Montreal &amp; Toronto
+Current weather in Montreal &amp; Toronto
