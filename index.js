@@ -15,7 +15,7 @@ let weather1 = {
   displayWeather: function(data) {
 const { temp } = data.main;
 const { feels_like } = data.main;
-const { pressure } = data.wind;
+const { pressure } = data.main;
 const { humidity } = data.main;
 document.querySelector(".temp1").innerText = Math.round(temp) + "°C";
 document.querySelector(".feels_like1").innerText = Math.round(feels_like) + "°C";
@@ -48,7 +48,7 @@ document.getElementById("montreal").addEventListener("load", function () {
     displayWeather: function(data) {
   const { temp } = data.main;
   const { feels_like } = data.main;
-  const { pressure } = data.wind;
+  const { pressure } = data.main;
   const { humidity } = data.main;
   document.querySelector(".temp2").innerText = Math.round(temp) + "°C";
   document.querySelector(".feels_like2").innerText = Math.round(feels_like) + "°C";
